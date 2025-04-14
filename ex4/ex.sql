@@ -1,0 +1,1 @@
+-- I have never interacted with a DB directly, I have only used django and its models.
