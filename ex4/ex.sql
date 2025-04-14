@@ -1,1 +1,2 @@
--- I have never interacted with a DB directly, I have only used django and its models.
+-- I wont lie I have never interacted with a DB directly, I have only used django and its models.
+-- But I'm eager to learn and will start right away
