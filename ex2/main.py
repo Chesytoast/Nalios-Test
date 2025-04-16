@@ -1,17 +1,19 @@
 def main():
     matrix = [
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [0, 0, 1, 0, 0, 0, 1, 1, 0, 0],
-        [0, 1, 1, 0, 0, 1, 1, 0, 0, 0],
-        [0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
-        [0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
-        [0, 1, 1, 0, 1, 1, 0, 1, 1, 0],
-        [0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
-        [0, 0, 1, 0, 1, 1, 0, 0, 1, 0],
-        [0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+        [0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     ]
-    gameOfLive(matrix)
+    res = gameOfLive(matrix)
+    # for row in res:
+    #    print(row)
 
 def nearbyCounter(i, j , colLen, rowLen, matrix):
     count = 0
@@ -49,9 +51,16 @@ def gameOfLive(matrix):
                 j += 1
             i += 1
         matrix = nextState
-        
-    # for row in matrix:
-    #    print(row)
+    #Changes made after the 2 hours (forgot to return in the last version)    
+    html = '<table>'
+    for row in matrix:
+        html += '<tr>'
+        for el in row:
+            html += '<td>' + str(el) + '</td>'
+        html += '</tr>'
+    html += '</table>'
+    print(html)
+    return matrix
 
 if __name__ == "__main__":
     main()
